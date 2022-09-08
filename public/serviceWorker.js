@@ -8,6 +8,14 @@ importScripts(
   "https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.2/dexie.min.js"
 );
 
+self.addEventListener("install", function (event) {
+  event.waitUntil(self.skipWaiting()); // activate worker immediately
+});
+
+self.addEventListener("activate", function (event) {
+  event.waitUntil(self.clients.claim()); // Become available to all pages
+});
+
 console.log("STARTING SERVICE WORKER");
 
 workbox.routing.registerRoute(
