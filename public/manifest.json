@@ -31,5 +31,38 @@
   "theme_color": "#4F46E5",
   "background_color": "#FFFFFF",
   "display": "fullscreen",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "shortcuts": [
+    {
+      "name": "Quick Add Drink",
+      "url": "/add",
+      "description": "Quickly log a drink of water or a hydrating beverage",
+      "icons": [
+        {
+          "src": "add-slice/manifest-icon-192.maskable.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "add-slice/manifest-icon-192.maskable.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "maskable"
+        },
+        {
+          "src": "add-slice/manifest-icon-512.maskable.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any"
+        },
+        {
+          "src": "add-slice/manifest-icon-512.maskable.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "maskable"
+        }
+      ]
+    }
+  ]
 }
