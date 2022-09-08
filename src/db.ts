@@ -16,9 +16,3 @@ export class WaterDBDexie extends Dexie {
 }
 
 export const db = new WaterDBDexie();
-
-export async function todaysDrinks() {
-  const midnight = new Date().setHours(0, 0, 0, 0);
-  const events = await db.events.where("ts").above(midnight).toArray();
-  return events;
-}
