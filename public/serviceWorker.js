@@ -56,3 +56,13 @@ self.addEventListener("message", async function (event) {
     });
   }
 });
+
+self.addEventListener("periodicsync", (event) => {
+  if (event.tag === "NOTIF_SCHEDULER") {
+    const t = setTimeout(() => {
+      self.registration.showNotification("HEY THIS IS A TEST", {
+        body: "HELLO!",
+      });
+    }, 30000);
+  }
+});

@@ -36,6 +36,15 @@ function App() {
             console.log("Shortcut triggered: sending drip event");
             sendMessage({ type: "DRIP" });
           }
+
+          try {
+            registration.periodicSync.register("NOTIF", {
+              minInterval: 30000,
+            });
+            console.log("HEY");
+          } catch (e) {
+            console.log("Background notifs could not be established", e);
+          }
         },
         (error) => {
           // catch
