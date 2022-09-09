@@ -1,3 +1,11 @@
+:root {
+  --primary-purple:#5046e6;
+}
+
+html, body {
+  margin: 0;
+}
+
 #root {
   max-width: 1280px;
   width: 100%;
@@ -9,7 +17,9 @@
 
 .App {
   width: 80%;
-
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -33,16 +43,80 @@
 
 button.add {
   width: 60%;
-  background-color: rgb(80, 70, 230);
+  background-color: #5046e6;
   color: #fff;
   transition: .3s all;
 }
 
 button.add:hover {
-  background-color: rgb(94, 84, 235);
+  background-color: #5e54eb;
   opacity: .95;
 }
 
 button.del {
   width: 20%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer a {
+  cursor: pointer;
+}
+
+/* settings modal */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #23232388;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .settings {
+  background-color: #fff;
+  border-radius: 16px;
+  width: 80%;
+  min-height: 300px;
+  padding: 25px 15px;
+  margin: 15px auto;
+  text-align: left;
+  display: flex;
+}
+
+.overlay .settings .header {
+  position: relative;
+  padding-left: 20px;
+  padding-top: 5px;
+  display: inline-block;
+}
+
+.overlay .settings .header .close svg {
+  cursor: pointer;
+  transition: .3s all;
+}
+
+.overlay .settings .header .close svg:hover {
+  transform: rotate(-90deg);
+}
+
+.settings .body {
+  padding-left: 25px;
+  flex-grow: 1;
+}
+.settings h1 {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.settings .fields {
+  padding: 15px;
+}
+
+.settings .notifications .toggle.granted {
+  background-color: var(--primary-purple);
+  color: #fff;
 }

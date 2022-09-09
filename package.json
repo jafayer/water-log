@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.0.10",
     "dexie": "^3.2.2",
     "dexie-react-hooks": "^1.1.1",
     "react": "^18.2.0",
