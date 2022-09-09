@@ -38,6 +38,7 @@ function App() {
           }
 
           try {
+            //@ts-ignore
             registration.periodicSync.register("NOTIF", {
               minInterval: 30000,
             });
