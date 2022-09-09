@@ -50,5 +50,9 @@ self.addEventListener("message", async function (event) {
 
     await db.events.delete(newToOld[0].ts);
     event.ports[0].postMessage({ toRemove });
+  } else if (type === "NOTIF") {
+    self.registration.showNotification("Hey this is a test!", {
+      body: "Hello!!",
+    });
   }
 });
